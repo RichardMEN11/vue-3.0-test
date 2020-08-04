@@ -1,17 +1,23 @@
 <template>
+<div class="nav">
+
+<router-link to="/composition-api">composition API</router-link>
+<router-link to="/multiple-root-elements">Multiple root elements</router-link>
+<router-link to="/multiple-v-models">Multiple V Models</router-link>
+<router-link to="/better-reactivity">Better reactivity</router-link>
+</div>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+
   }
 }
 </script>
@@ -24,5 +30,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 5rem;
 }
 </style>
